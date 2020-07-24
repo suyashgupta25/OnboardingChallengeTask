@@ -1,0 +1,27 @@
+server:
+    port: 8100
+spring:
+    application:
+        name: user-portal
+    datasource:
+        driverClassName: com.mysql.cj.jdbc.Driver
+        password: 'Activa@25'
+        url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/insurance?useUnicode=yes&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+        username: suyash
+    jpa:
+        show-sql: true
+        hibernate:
+            ddl-auto: update
+logging:
+    level:
+        com.netflix.eureka: OFF
+        com.netflix.discovery: OFF
+eureka:
+    instance:
+        appname: user-portal
+    client:
+        enabled: true
+        register-with-eureka: true
+        fetch-registry: true
+        service-url:
+            defaultZone: http://localhost:8761/eureka/

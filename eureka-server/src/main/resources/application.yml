@@ -1,6 +1,13 @@
+spring:
+    application:
+        name: eureka-server
 eureka:
     client:
         fetch-registry: false
         register-with-eureka: false
 server:
     port: 8761
+logging:
+    level:
+        com.netflix.eureka: false
+        com.netflix.discovery: false
